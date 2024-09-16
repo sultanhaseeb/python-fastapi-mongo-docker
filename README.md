@@ -104,3 +104,39 @@ To run the application using Docker, follow these steps:
 ❯ docker rm fastapi-container
 
 ```
+
+## API Endpoints
+
+### Get All Users
+- **Endpoint:** `/`
+- **Method:** `GET`
+- **Description:** Fetch all users from the MongoDB collection.
+
+### Create a New User
+- **Endpoint:** `/`
+- **Method:** `POST`
+- **Description:** Insert a new user into the database.
+- **Payload Example:**
+  ```json
+  {
+      "name": "John Doe",
+      "email": "john.doe@example.com",
+      "age": 30
+  }
+
+### Update a User
+- **Endpoint:** `/{id}`
+- **Method:** `PUT`
+- **Description:** Update an existing user's information.
+- **Payload Example:**
+  ```json
+  {
+      "name": "John Smith",
+      "email": "john.smith@example.com",
+      "age": 35
+  }
+
+### Delete a User
+- **Endpoint:** `/{id}`
+- **Method:** `DELETE`
+- **Description:** Delete a user by ID.
